@@ -1,7 +1,7 @@
 {
   "pageTitle": "Dachbox-Retter: Der smarte Feder-Blocker für müde Gasfedern",
   "metaDescription": "Gasfedern der Dachbox schwach? Unser Feder-Blocker ist die clevere, günstige Lösung. Einfach einklemmen, Box bleibt sicher offen. Jetzt entdecken!",
-  "metaKeywords": "Dachbox Reparatur, Gasfeder fixieren, Dachbox Zubehör, Federblocker, Thule Ersatzteile, Dachbox Halterung, Gasdruckfeder Ersatz",
+  "metaKeywords": "Dachbox Reparatur, Gasfeder fixieren, Dachbox Zubehör, Federblocker, Thule Ersatzteile, Dachbox Halterung, Gasdruckfeder Ersatz, Kamei Husky, Hapro Traxer, Jetbag Ersatzteile",
   "productName": "Dachbox-Feder-Blocker (Universal)",
   "mainHeading": "Warum teure Gasfedern tauschen, wenn ein Klick genügt?",
   "subHeading": "Die wirtschaftlichste Lösung für Dachboxen, die nicht mehr von alleine offen bleiben.",
@@ -9,19 +9,63 @@
   "manufacturers": [
     {
       "name": "Thule",
-      "models": ["Motion XT", "Force XT", "Pacific", "Dynamic", "Excellence"]
+      "models": ["Motion 3", "Motion XT", "Force XT", "Vector", "Pacific", "Atlantis", "Spirit", "Ocean", "Alpine", "Touring", "Excellence XT"]
     },
     {
       "name": "Kamei",
-      "models": ["Oyster", "Fosco", "Husky", "Corvara"]
+      "models": ["Oyster", "Fosco", "Husky M", "Husky L", "Husky XXL", "Corvara S", "Delphin", "Diamant", "Traveller Box", "510", "330"]
     },
     {
       "name": "Hapro",
-      "models": ["Trivor", "Zenith", "Traxer", "Rider"]
+      "models": ["Trivor", "Zenith", "Traxer", "Rider", "Carver", "Cruiser", "Roady", "Nordic", "Probox", "Funbox"]
+    },
+    {
+      "name": "Jetbag",
+      "models": ["Apollo", "Sprint", "Family", "Classic", "Holiday"]
     },
     {
       "name": "Atera",
-      "models": ["Casar", "Certo"]
+      "models": ["Casar", "Certo", "Carver II", "Zenith 650", "Zenith 850"]
+    },
+    {
+      "name": "Mont Blanc",
+      "models": ["Triton", "Altitude", "Vista"]
+    },
+    {
+      "name": "Packline",
+      "models": ["NX Summit", "NX Summit XL", "FX-SUV", "NX 215", "NX Premium"]
+    },
+    {
+      "name": "Farad",
+      "models": ["Marlin", "Raya", "Crub"]
+    },
+    {
+      "name": "G3",
+      "models": ["Elegance", "Reef", "Arjes", "Helios", "Krono", "Spark"]
+    },
+    {
+      "name": "Menabo",
+      "models": ["Diamond", "Mania", "Marathon"]
+    },
+    {
+      "name": "Modula",
+      "models": ["Ciao", "Wego", "Travel"]
+    },
+    {
+      "name": "Twinny Load",
+      "models": ["NXT", "RST"]
+    },
+    {
+      "name": "Neumann",
+      "models": ["Whale 200", "Whale Daddy"]
+    },
+    {
+      "name": "Cruz",
+      "models": ["Easy", "Clan"]
+    },
+    {
+      "name": "Yakima",
+      "models": ["Rocketbox", "SkyBox"]
     }
   ],
   "benefits": [
