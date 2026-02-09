@@ -58,8 +58,10 @@ async function build() {
             };
 
             Object.keys(replacements).forEach(key => {
-                const regex = new RegExp(`{{${key}}}`, 'g');
-                html = html.replace(regex, replacements[key]);
+                if (typeof replacements[key] === 'string' || typeof replacements[key] === 'number') {
+                    const regex = new RegExp(`{{${key}}}`, 'g');
+                    html = html.replace(regex, replacements[key]);
+                }
             });
 
             const benefitsHtml = data.benefits.map(b => `
