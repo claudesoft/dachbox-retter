@@ -6,6 +6,24 @@
   "mainHeading": "Warum teure Gasfedern tauschen, wenn ein Klick genügt?",
   "subHeading": "Die wirtschaftlichste Lösung für Dachboxen, die nicht mehr von alleine offen bleiben.",
   "introduction": "Ihre Dachbox ist zu 99% der Zeit geschlossen. Wenn die Gasfedern nach ein paar Jahren nachlassen, ist ein kompletter Austausch oft reine Geldverschwendung. Unser Blockiersystem ist die Antwort: Ein kleiner, robuster Helfer, den Sie nur dann einklemmen, wenn Sie die Box wirklich offen brauchen.",
+  "manufacturers": [
+    {
+      "name": "Thule",
+      "models": ["Motion XT", "Force XT", "Pacific", "Dynamic", "Excellence"]
+    },
+    {
+      "name": "Kamei",
+      "models": ["Oyster", "Fosco", "Husky", "Corvara"]
+    },
+    {
+      "name": "Hapro",
+      "models": ["Trivor", "Zenith", "Traxer", "Rider"]
+    },
+    {
+      "name": "Atera",
+      "models": ["Casar", "Certo"]
+    }
+  ],
   "benefits": [
     {
       "title": "💰 Unschlagbar Günstig",

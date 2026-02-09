@@ -7,7 +7,6 @@
     <meta name="keywords" content="{{metaKeywords}}">
     <title>{{pageTitle}}</title>
     
-    <!-- AI & SEO Optimization: JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -34,6 +33,7 @@
             --accent: #10b981;
             --text: #1f2937;
             --bg: #f9fafb;
+            --sidebar-width: 260px;
         }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -41,6 +41,84 @@
             margin: 0;
             color: var(--text);
             background-color: var(--bg);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        aside {
+            width: var(--sidebar-width);
+            background: #fff;
+            border-right: 1px solid #e5e7eb;
+            padding: 2rem 1rem;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+        .nav-logo {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            display: block;
+            text-decoration: none;
+        }
+        .nav-group {
+            margin-bottom: 1.5rem;
+        }
+        .nav-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none; /* Hidden by default */
+        }
+        .nav-group.expanded .nav-list {
+            display: block;
+        }
+        .nav-item a {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            color: #4b5563;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .nav-item a:hover {
+            background: #f3f4f6;
+            color: var(--primary);
+        }
+        .nav-item.active a {
+            background: #eff6ff;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .nav-group.expanded .nav-title::after {
+            content: '▾';
+        }
+        .nav-title::after {
+            content: '▸';
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         .container {
             max-width: 800px;
@@ -130,37 +208,58 @@
             padding: 2rem;
             color: #9ca3af;
         }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
+    <aside>
+        <a href="index.html" class="nav-logo">📦 Dachbox-Retter</a>
+        <nav>
+            {{sidebar}}
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <div class="container">
+                <h1>{{mainHeading}}</h1>
+                <p class="subheading">{{subHeading}}</p>
+            </div>
+        </header>
+
         <div class="container">
-            <h1>{{mainHeading}}</h1>
-            <p class="subheading">{{subHeading}}</p>
-        </div>
-    </header>
+            <div class="intro">
+                {{introduction}}
+            </div>
 
-    <div class="container">
-        <div class="intro">
-            {{introduction}}
+            <div class="grid">
+                {{benefits}}
+            </div>
+
+            <div class="cta-section">
+                <h2>{{callToAction}}</h2>
+                <a href="#" class="btn" onclick="alert('Vielen Dank für Ihr Interesse! Da dies ein Hobbyprojekt ist, sammeln wir aktuell noch Feedback. Kommen Sie bald wieder!')">{{buttonText}}</a>
+            </div>
+
+            <div class="disclaimer">
+                {{disclaimer}}
+            </div>
         </div>
 
-        <div class="grid">
-            {{benefits}}
-        </div>
-
-        <div class="cta-section">
-            <h2>{{callToAction}}</h2>
-            <a href="#" class="btn" onclick="alert('Vielen Dank für Ihr Interesse! Da dies ein Hobbyprojekt ist, sammeln wir aktuell noch Feedback. Kommen Sie bald wieder!')">{{buttonText}}</a>
-        </div>
-
-        <div class="disclaimer">
-            {{disclaimer}}
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Dachbox-Retter | Handgefertigt für schlaue Camper
-    </footer>
+        <footer>
+            &copy; 2026 Dachbox-Retter | Handgefertigt für schlaue Camper
+        </footer>
+    </main>
 </body>
 </html>
