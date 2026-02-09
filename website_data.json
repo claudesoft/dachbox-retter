@@ -3,69 +3,74 @@
   "metaDescription": "Gasfedern der Dachbox schwach? Unser Feder-Blocker ist die clevere, günstige Lösung. Einfach einklemmen, Box bleibt sicher offen. Jetzt entdecken!",
   "metaKeywords": "Dachbox Reparatur, Gasfeder fixieren, Dachbox Zubehör, Federblocker, Thule Ersatzteile, Dachbox Halterung, Gasdruckfeder Ersatz, Kamei Husky, Hapro Traxer, Jetbag Ersatzteile",
   "productName": "Dachbox-Feder-Blocker (Universal)",
-  "mainHeading": "Warum teure Gasfedern tauschen, wenn ein Klick genügt?",
-  "subHeading": "Die wirtschaftlichste Lösung für Dachboxen, die nicht mehr von alleine offen bleiben.",
-  "introduction": "Ihre Dachbox ist zu 99% der Zeit geschlossen. Wenn die Gasfedern nach ein paar Jahren nachlassen, ist ein kompletter Austausch oft reine Geldverschwendung. Unser Blockiersystem ist die Antwort: Ein kleiner, robuster Helfer, den Sie nur dann einklemmen, wenn Sie die Box wirklich offen brauchen.",
+  "price": "14,95 €",
+  "shippingInfo": "Versandfertig in 24h | Kostenloser Versand ab 2 Stück",
   "manufacturers": [
     {
       "name": "Thule",
-      "models": ["Motion 3", "Motion XT", "Force XT", "Vector", "Pacific", "Atlantis", "Spirit", "Ocean", "Alpine", "Touring", "Excellence XT"]
+      "defaultSpecs": { "springs": 2, "force": "50-120N", "length": "280mm" },
+      "models": [
+        { "name": "Motion 3", "specs": { "force": "100N" } },
+        { "name": "Motion XT", "specs": { "force": "120N" } },
+        { "name": "Force XT", "specs": { "force": "90N" } },
+        { "name": "Vector", "specs": { "force": "120N" } },
+        { "name": "Pacific", "specs": { "force": "50N" } },
+        { "name": "Atlantis", "specs": { "force": "80N" } },
+        { "name": "Spirit", "specs": { "force": "80N" } },
+        { "name": "Ocean", "specs": { "force": "50N" } },
+        { "name": "Alpine", "specs": { "force": "60N" } },
+        { "name": "Touring", "specs": { "force": "50N" } },
+        { "name": "Excellence XT", "specs": { "force": "120N" } }
+      ]
     },
     {
       "name": "Kamei",
-      "models": ["Oyster", "Fosco", "Husky M", "Husky L", "Husky XXL", "Corvara S", "Delphin", "Diamant", "Traveller Box", "510", "330"]
+      "defaultSpecs": { "springs": 2, "force": "90-170N", "length": "269mm" },
+      "models": [
+        { "name": "Oyster", "specs": { "force": "170N" } },
+        { "name": "Fosco", "specs": { "force": "170N" } },
+        { "name": "Husky M", "specs": { "force": "90N" } },
+        { "name": "Husky L", "specs": { "force": "170N" } },
+        { "name": "Husky XXL", "specs": { "force": "170N" } },
+        { "name": "Corvara S", "specs": { "force": "170N" } },
+        { "name": "Delphin", "specs": { "force": "90N" } },
+        { "name": "Diamant", "specs": { "force": "90N" } },
+        { "name": "Traveller Box", "specs": { "force": "90N" } },
+        { "name": "510", "specs": { "force": "170N" } },
+        { "name": "330", "specs": { "force": "90N" } }
+      ]
     },
     {
       "name": "Hapro",
-      "models": ["Trivor", "Zenith", "Traxer", "Rider", "Carver", "Cruiser", "Roady", "Nordic", "Probox", "Funbox"]
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "315mm" },
+      "models": [
+        { "name": "Trivor" }, { "name": "Zenith" }, { "name": "Traxer" }, 
+        { "name": "Rider" }, { "name": "Carver" }, { "name": "Cruiser" }, 
+        { "name": "Roady" }, { "name": "Nordic" }, { "name": "Probox" }, { "name": "Funbox" }
+      ]
     },
     {
       "name": "Jetbag",
-      "models": ["Apollo", "Sprint", "Family", "Classic", "Holiday"]
+      "defaultSpecs": { "springs": 2, "force": "80N", "length": "280mm" },
+      "models": [
+        { "name": "Apollo" }, { "name": "Sprint" }, { "name": "Family" }, 
+        { "name": "Classic" }, { "name": "Holiday" }
+      ]
     },
     {
       "name": "Atera",
-      "models": ["Casar", "Certo", "Carver II", "Zenith 650", "Zenith 850"]
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "300mm" },
+      "models": [
+        { "name": "Casar" }, { "name": "Certo" }, { "name": "Carver II" }, 
+        { "name": "Zenith 650" }, { "name": "Zenith 850" }
+      ]
     },
     {
       "name": "Mont Blanc",
-      "models": ["Triton", "Altitude", "Vista"]
-    },
-    {
-      "name": "Packline",
-      "models": ["NX Summit", "NX Summit XL", "FX-SUV", "NX 215", "NX Premium"]
-    },
-    {
-      "name": "Farad",
-      "models": ["Marlin", "Raya", "Crub"]
-    },
-    {
-      "name": "G3",
-      "models": ["Elegance", "Reef", "Arjes", "Helios", "Krono", "Spark"]
-    },
-    {
-      "name": "Menabo",
-      "models": ["Diamond", "Mania", "Marathon"]
-    },
-    {
-      "name": "Modula",
-      "models": ["Ciao", "Wego", "Travel"]
-    },
-    {
-      "name": "Twinny Load",
-      "models": ["NXT", "RST"]
-    },
-    {
-      "name": "Neumann",
-      "models": ["Whale 200", "Whale Daddy"]
-    },
-    {
-      "name": "Cruz",
-      "models": ["Easy", "Clan"]
-    },
-    {
-      "name": "Yakima",
-      "models": ["Rocketbox", "SkyBox"]
+      "defaultSpecs": { "springs": 2, "force": "75N", "length": "265mm" },
+      "models": [
+        { "name": "Triton" }, { "name": "Altitude" }, { "name": "Vista" }
+      ]
     }
   ],
   "benefits": [
@@ -75,18 +80,8 @@
     },
     {
       "title": "⚡ Sekundenschnell",
-      "description": "Einfach in die ausgefahrene Feder einklemmen. Hält bombenfest, solange Sie packen. Danach einfach wieder abnehmen."
-    },
-    {
-      "title": "🌍 Nachhaltig & Logisch",
-      "description": "Warum funktionierende Mechanik wegwerfen? Behalten Sie Ihre alten Federn und unterstützen Sie sie nur im Bedarfsfall."
-    },
-    {
-      "title": "🛡️ Sicherheit Zuerst",
-      "description": "Kein Risiko mehr, dass der schwere Deckel Ihnen auf den Kopf oder die Finger fällt."
+      "description": "Einfach in die ausgefahrene Feder einklemmen. Hält bombenfest, solange Sie packen."
     }
   ],
-  "callToAction": "Helfen Sie Ihren müden Federn auf die Sprünge!",
-  "buttonText": "🚀 Jetzt Dachbox-Retter sichern",
-  "disclaimer": "Kleingedrucktes: Diese Blockierteile sind ein privates Hobbyprojekt, um das allgemeine Interesse an einer solchen Lösung zu testen. Die Qualität und das Finish entsprechen einem Prototyp/DIY-Projekt. Verwendung auf eigene Gefahr."
+  "disclaimer": "Kleingedrucktes: Diese Blockierteile sind ein privates Hobbyprojekt. Die Qualität entspricht einem DIY-Projekt. Verwendung auf eigene Gefahr."
 }

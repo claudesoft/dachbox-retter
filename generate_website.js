@@ -2,10 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function slugify(text) {
-    return text.toString().toLowerCase().trim()
-        .replace(/\s+/g, '-')     // Replace spaces with -
-        .replace(/[^\w-]+/g, '')  // Remove all non-word chars
-        .replace(/--+/g, '-');    // Replace multiple - with single -
+    return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-');
 }
 
 async function build() {
@@ -14,84 +11,67 @@ async function build() {
         const templateStr = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
 
         const pages = [];
+        pages.push({ filename: 'index.html', title: 'Startseite', manufacturer: 'Universal', model: 'Alle Modelle', specs: {} });
 
-        // 1. Prepare general page (index.html)
-        pages.push({
-            filename: 'index.html',
-            title: data.mainHeading,
-            activeManufacturer: null,
-            activeModel: null
-        });
-
-        // 2. Prepare pages for each model
         data.manufacturers.forEach(m => {
-            m.models.forEach(model => {
+            m.models.forEach(modelObj => {
+                const modelName = typeof modelObj === 'string' ? modelObj : modelObj.name;
+                const modelSpecs = modelObj.specs || {};
+                const combinedSpecs = { ...m.defaultSpecs, ...modelSpecs };
+                
                 pages.push({
-                    filename: `${slugify(m.name)}-${slugify(model)}.html`,
-                    title: `${data.productName} für ${m.name} ${model}`,
-                    activeManufacturer: m.name,
-                    activeModel: model
+                    filename: `${slugify(m.name)}-${slugify(modelName)}.html`,
+                    manufacturer: m.name,
+                    model: modelName,
+                    specs: combinedSpecs
                 });
             });
         });
 
-        // 3. Generate each page
         pages.forEach(page => {
             let html = templateStr;
 
-            // Generate Sidebar HTML for this specific page
             const sidebarHtml = data.manufacturers.map(m => {
-                const isExpanded = m.name === page.activeManufacturer;
-                const modelListHtml = m.models.map(model => {
-                    const isActive = m.name === page.activeManufacturer && model === page.activeModel;
-                    const link = `${slugify(m.name)}-${slugify(model)}.html`;
-                    return `<li class="nav-item ${isActive ? 'active' : ''}"><a href="${link}">${model}</a></li>`;
+                const isExpanded = m.name === page.manufacturer;
+                const modelListHtml = m.models.map(modelObj => {
+                    const mName = typeof modelObj === 'string' ? modelObj : modelObj.name;
+                    const isActive = m.name === page.manufacturer && mName === page.model;
+                    return `<li class="nav-item ${isActive ? 'active' : ''}"><a href="${slugify(m.name)}-${slugify(mName)}.html">${mName}</a></li>`;
                 }).join('');
 
-                return `
-                <div class="nav-group ${isExpanded ? 'expanded' : ''}">
-                    <div class="nav-title">${m.name}</div>
-                    <ul class="nav-list">
-                        ${modelListHtml}
-                    </ul>
-                </div>`;
+                return `<div class="nav-group ${isExpanded ? 'expanded' : ''}"><div class="nav-title">${m.name}</div><ul class="nav-list">${modelListHtml}</ul></div>`;
             }).join('');
 
-            // Replace Placeholders
             const replacements = {
                 ...data,
-                mainHeading: page.activeModel ? `Dachbox-Retter für ${page.activeManufacturer} ${page.activeModel}` : data.mainHeading,
-                pageTitle: page.activeModel ? `${data.productName} für ${page.activeManufacturer} ${page.activeModel} | Dachbox-Retter` : data.pageTitle,
-                sidebar: sidebarHtml
+                pageTitle: `${data.productName} für ${page.manufacturer} ${page.model} | Dachbox-Retter`,
+                manufacturer: page.manufacturer,
+                model: page.model,
+                springCount: page.specs.springs || '2',
+                force: page.specs.force || '90N',
+                blockerLength: page.specs.length || '280mm',
+                sidebar: sidebarHtml,
+                introduction: `Ihre ${page.manufacturer} Dachbox (Modell ${page.model}) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. ${page.specs.force || '90N'}) für viel Geld auszutauschen, ist unser Blocker die perfekte Lösung. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.`
             };
 
-            const placeholders = [
-                'pageTitle', 'metaDescription', 'metaKeywords', 'productName',
-                'mainHeading', 'subHeading', 'introduction', 'callToAction', 
-                'buttonText', 'disclaimer', 'sidebar'
-            ];
-
-            placeholders.forEach(key => {
+            Object.keys(replacements).forEach(key => {
                 const regex = new RegExp(`{{${key}}}`, 'g');
                 html = html.replace(regex, replacements[key]);
             });
 
             const benefitsHtml = data.benefits.map(b => `
-                <div class="card">
+                <div class="benefit-card">
                     <h3>${b.title}</h3>
                     <p>${b.description}</p>
                 </div>
             `).join('');
-
             html = html.replace('{{benefits}}', benefitsHtml);
 
             fs.writeFileSync(path.join(__dirname, page.filename), html);
         });
 
-        console.log(`✅ ${pages.length} Seiten wurden erfolgreich generiert.`);
-    } catch (err) {
-        console.error('❌ Fehler beim Generieren:', err);
-    }
+        console.log(`✅ ${pages.length} Shop-Seiten generiert.`);
+    } catch (err) { console.error(err); }
 }
 
 build();

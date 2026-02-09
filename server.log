@@ -7,3 +7,5 @@
 192.168.178.201 - - [09/Feb/2026 16:14:20] "GET /index.html HTTP/1.1" 200 -
 192.168.178.201 - - [09/Feb/2026 16:14:25] "GET /atera-casar.html HTTP/1.1" 200 -
 192.168.178.201 - - [09/Feb/2026 16:14:39] "GET /hapro-rider.html HTTP/1.1" 200 -
+192.168.178.201 - - [09/Feb/2026 16:16:10] "GET /hapro-rider.html HTTP/1.1" 200 -
+192.168.178.201 - - [09/Feb/2026 16:16:21] "GET /hapro-traxer.html HTTP/1.1" 200 -
