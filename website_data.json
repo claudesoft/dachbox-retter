@@ -71,6 +71,71 @@
       "models": [
         { "name": "Triton" }, { "name": "Altitude" }, { "name": "Vista" }
       ]
+    },
+    {
+      "name": "Packline",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "NX Summit" }, { "name": "NX Summit XL" }, { "name": "FX-SUV" }, 
+        { "name": "NX 215" }, { "name": "NX Premium" }
+      ]
+    },
+    {
+      "name": "Farad",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Marlin" }, { "name": "Raya" }, { "name": "Crub" }
+      ]
+    },
+    {
+      "name": "G3",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Elegance" }, { "name": "Reef" }, { "name": "Arjes" }, 
+        { "name": "Helios" }, { "name": "Krono" }, { "name": "Spark" }
+      ]
+    },
+    {
+      "name": "Menabo",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Diamond" }, { "name": "Mania" }, { "name": "Marathon" }
+      ]
+    },
+    {
+      "name": "Modula",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Ciao" }, { "name": "Wego" }, { "name": "Travel" }
+      ]
+    },
+    {
+      "name": "Twinny Load",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "NXT" }, { "name": "RST" }
+      ]
+    },
+    {
+      "name": "Neumann",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Whale 200" }, { "name": "Whale Daddy" }
+      ]
+    },
+    {
+      "name": "Cruz",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Easy" }, { "name": "Clan" }
+      ]
+    },
+    {
+      "name": "Yakima",
+      "defaultSpecs": { "springs": 2, "force": "89N", "length": "285mm", "rod": "8mm", "cylinder": "18mm", "blocker": "105mm" },
+      "models": [
+        { "name": "Rocketbox" }, { "name": "SkyBox" }
+      ]
     }
   ],
   "benefits": [
@@ -83,5 +148,5 @@
       "description": "Einfach in die ausgefahrene Feder einklemmen. Hält bombenfest, solange Sie packen."
     }
   ],
-  "disclaimer": "Kleingedrucktes: Diese Blockierteile sind ein privates Hobbyprojekt. Die Qualität entspricht einem DIY-Projekt. Verwendung auf eigene Gefahr."
+  "disclaimer": "Kleingedrucktes: Diese Blockierteile sind ein privates Hobbyprojekt. Die Qualität entspricht einem DIY-projekt. Verwendung auf eigene Gefahr."
 }
