@@ -8,7 +8,7 @@
   "manufacturers": [
     {
       "name": "Thule",
-      "defaultSpecs": { "springs": 2, "force": "50-120N", "length": "280mm" },
+      "defaultSpecs": { "springs": 2, "force": "80-120N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
       "models": [
         { "name": "Motion 3", "specs": { "force": "100N" } },
         { "name": "Motion XT", "specs": { "force": "120N" } },
@@ -25,24 +25,24 @@
     },
     {
       "name": "Kamei",
-      "defaultSpecs": { "springs": 2, "force": "90-170N", "length": "269mm" },
+      "defaultSpecs": { "springs": 2, "force": "170N", "length": "290mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
       "models": [
-        { "name": "Oyster", "specs": { "force": "170N" } },
-        { "name": "Fosco", "specs": { "force": "170N" } },
-        { "name": "Husky M", "specs": { "force": "90N" } },
-        { "name": "Husky L", "specs": { "force": "170N" } },
-        { "name": "Husky XXL", "specs": { "force": "170N" } },
-        { "name": "Corvara S", "specs": { "force": "170N" } },
-        { "name": "Delphin", "specs": { "force": "90N" } },
-        { "name": "Diamant", "specs": { "force": "90N" } },
-        { "name": "Traveller Box", "specs": { "force": "90N" } },
-        { "name": "510", "specs": { "force": "170N" } },
-        { "name": "330", "specs": { "force": "90N" } }
+        { "name": "Oyster" },
+        { "name": "Fosco" },
+        { "name": "Husky M", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
+        { "name": "Husky L" },
+        { "name": "Husky XXL" },
+        { "name": "Corvara S" },
+        { "name": "Delphin", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
+        { "name": "Diamant", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
+        { "name": "Traveller Box", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
+        { "name": "510" },
+        { "name": "330", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } }
       ]
     },
     {
       "name": "Hapro",
-      "defaultSpecs": { "springs": 2, "force": "100N", "length": "315mm" },
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "315mm", "rod": "8mm", "cylinder": "18mm", "blocker": "110mm" },
       "models": [
         { "name": "Trivor" }, { "name": "Zenith" }, { "name": "Traxer" }, 
         { "name": "Rider" }, { "name": "Carver" }, { "name": "Cruiser" }, 
@@ -51,7 +51,7 @@
     },
     {
       "name": "Jetbag",
-      "defaultSpecs": { "springs": 2, "force": "80N", "length": "280mm" },
+      "defaultSpecs": { "springs": 2, "force": "80N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
       "models": [
         { "name": "Apollo" }, { "name": "Sprint" }, { "name": "Family" }, 
         { "name": "Classic" }, { "name": "Holiday" }
@@ -59,7 +59,7 @@
     },
     {
       "name": "Atera",
-      "defaultSpecs": { "springs": 2, "force": "100N", "length": "300mm" },
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "300mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
       "models": [
         { "name": "Casar" }, { "name": "Certo" }, { "name": "Carver II" }, 
         { "name": "Zenith 650" }, { "name": "Zenith 850" }
@@ -67,7 +67,7 @@
     },
     {
       "name": "Mont Blanc",
-      "defaultSpecs": { "springs": 2, "force": "75N", "length": "265mm" },
+      "defaultSpecs": { "springs": 2, "force": "75N", "length": "265mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" },
       "models": [
         { "name": "Triton" }, { "name": "Altitude" }, { "name": "Vista" }
       ]

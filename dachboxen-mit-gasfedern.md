@@ -317,31 +317,23 @@ Bekannt für gutes Preis-Leistungs-Verhältnis.
 
 ### Gasfeder-Spezifikationen nach Hersteller
 
-| Hersteller | Modelle | Länge | Kraft | Hub | Befestigung | Artikelnr. |
-|------------|---------|-------|-------|-----|-------------|------------|
-| **Hapro** | Allgemein (ältere Modelle) | 315 mm | 100 N | - | Kugelpfanne | #00027 |
-| **Kamei** | Husky M, Delphin, Diamant | 269 mm | 90 N | - | Kugelpfanne | 05259801 |
-| **Kamei** | Husky L | ~290 mm | 170 N | - | Kugelpfanne | 05259503 |
-| **Kamei** | Husky XXL, Oyster, Corvara S, 510 | ~290 mm | 170 N | - | Kugelpfanne | 05259501 |
-| **Mont Blanc** | Triton, Altitude | 265,5 mm | 75 N | 100 mm | Öse | 163457 (Stabilus) |
-| **Mont Blanc** | Alternative | 265 mm | - | - | Öse | 079211 |
-| **Thule** | Alpine, Pacific, Atlantis | diverse | diverse | - | - | 354899 (Stabilus) |
-| **Thule** | Touring, Pacific | - | - | - | - | 14930 (Lid Lifter ML50) |
-| **Thule** | Excellence XT | - | - | - | - | 14939 (Lid Lifter ML120) |
-| **Yakima** | Rocketbox | 285 mm (11") | 89 N | 105 mm | Öse | 3032EN, FGN342 |
-| **Universal** | diverse | 265 mm | 90 N | - | Kugelpfanne | Gastac |
-| **Universal** | diverse | 265 mm | 110 N | - | Öse | kfzteile24 |
+| Hersteller | Modelle | Länge (Ext) | Kraft | Rod Ø | Cylinder Ø | Artikelnr. |
+|------------|---------|-------|-------|-------|-------|------------|
+| **Hapro** | Traxer, Zenith, etc. | 315 mm | 100 N | 8 mm | 18 mm | #00027 |
+| **Kamei** | Husky M, Delphin | 269 mm | 90 N | 6 mm | 15 mm | 05259801 |
+| **Kamei** | Husky L, XXL, Oyster | ~290 mm | 170 N | 8 mm | 18 mm | 05259503 |
+| **Mont Blanc** | Triton, Altitude | 265,5 mm | 75 N | 6 mm | 15 mm | 163457 |
+| **Thule** | Motion, Force, etc. | ~280 mm | 80-120 N | 8 mm | 18 mm | 354899 |
+| **Jetbag** | Apollo, Sprint | ~280 mm | 80 N | 8 mm | 18 mm | Universal |
 
-### Typische Spezifikationen (Übersicht)
+### Empfohlene Blocker-Abmessungen
 
-| Parameter | Übliche Werte |
-|-----------|---------------|
-| Kraft | 75-170 Newton (N) |
-| Länge (ausgefahren) | 265-315 mm |
-| Hub | 100-105 mm |
-| Zylinderdurchmesser | 18 mm |
-| Kolbenstangendurchmesser | 6,3 mm |
-| Befestigung | Kugelpfanne oder Öse |
+Um die Box sicher offen zu halten, muss der Blocker auf die **ausgefahrene Kolbenstange (Rod)** geklemmt werden. 
+
+| Gasfeder-Typ | Rod Ø | Blocker-Innenmaß | Blocker-Länge (empf.) |
+|--------------|-------|------------------|-----------------------|
+| **Standard 6/15** | 6 mm | 6.5 - 7 mm | 70 - 90 mm |
+| **Standard 8/18** | 8 mm | 8.5 - 9 mm | 80 - 110 mm |
 
 ### Wie man die richtige Gasfeder findet
 

@@ -49,7 +49,10 @@ async function build() {
                 model: page.model,
                 springCount: page.specs.springs || '2',
                 force: page.specs.force || '90N',
-                blockerLength: page.specs.length || '280mm',
+                rodDiameter: page.specs.rod || '8mm',
+                cylinderDiameter: page.specs.cylinder || '18mm',
+                extendedLength: page.specs.length || '280mm',
+                blockerLength: page.specs.blocker || '100mm',
                 sidebar: sidebarHtml,
                 introduction: `Ihre ${page.manufacturer} Dachbox (Modell ${page.model}) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. ${page.specs.force || '90N'}) für viel Geld auszutauschen, ist unser Blocker die perfekte Lösung. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.`
             };
