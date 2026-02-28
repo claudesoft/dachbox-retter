@@ -5,6 +5,77 @@ function slugify(text) {
     return text.toString().toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]+/g, '').replace(/--+/g, '-');
 }
 
+function escapeJsonString(str) {
+    return str.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+}
+
+function buildJsonLdProduct(data, page) {
+    const product = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": `Dachbox-Feder-Blocker für ${page.manufacturer} ${page.model}`,
+        "description": `Mechanischer Feder-Blocker für schwache Gasfedern der ${page.manufacturer} ${page.model} Dachbox. Günstige Alternative zum teuren Gasfeder-Austausch.`,
+        "image": "https://selfmade.lu/img1.jpg",
+        "brand": { "@type": "Brand", "name": "Dachbox-Retter" },
+        "offers": {
+            "@type": "Offer",
+            "price": "14.95",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": data.shopLink,
+            "shippingDetails": data.shippingCountries.map(c => ({
+                "@type": "OfferShippingDetails",
+                "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": c.code
+                },
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": c.price === "Kostenlos" ? "0" : c.price.replace(' €', '').replace(',', '.'),
+                    "currency": "EUR"
+                }
+            }))
+        }
+    };
+    return `<script type="application/ld+json">${JSON.stringify(product)}</script>`;
+}
+
+function buildJsonLdFaq(data) {
+    const faq = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.faqs.map(f => ({
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.answer
+            }
+        }))
+    };
+    return `<script type="application/ld+json">${JSON.stringify(faq)}</script>`;
+}
+
+function buildShippingCountriesHtml(countries) {
+    return countries.map(c => `
+        <div class="shipping-country">
+            <span class="flag">${c.flag}</span>
+            <span class="details"><strong>${c.country}</strong>: ${c.price}</span>
+            <span class="days">(${c.days})</span>
+        </div>
+    `).join('');
+}
+
+function buildComparisonsHtml(comparisons) {
+    return comparisons.map(c => `
+        <tr>
+            <td><strong>${c.method}</strong></td>
+            <td style="color: #dc2626;">${c.risk}</td>
+            <td style="color: #059669;">${c.advantage}</td>
+        </tr>
+    `).join('');
+}
+
 async function build() {
     try {
         const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'website_data.json'), 'utf8'));
@@ -19,7 +90,7 @@ async function build() {
                 const modelSpecs = modelObj.specs || {};
                 const combinedSpecs = { ...m.defaultSpecs, ...modelSpecs };
                 const variants = modelObj.variants || [];
-                
+
                 pages.push({
                     filename: `${slugify(m.name)}-${slugify(modelName)}.html`,
                     manufacturer: m.name,
@@ -29,6 +100,10 @@ async function build() {
                 });
             });
         });
+
+        const jsonLdFaq = buildJsonLdFaq(data);
+        const shippingCountriesHtml = buildShippingCountriesHtml(data.shippingCountries);
+        const comparisonsHtml = buildComparisonsHtml(data.comparisons);
 
         pages.forEach(page => {
             let html = templateStr;
@@ -57,9 +132,15 @@ async function build() {
                 `;
             }
 
+            const pageMetaDesc = `${page.manufacturer} ${page.model} Dachbox Gasfeder schwach? Der Feder-Blocker hält den Deckel sicher offen — günstige Alternative zum Gasfeder-Austausch. Versand nach LU, DE, FR, BE.`;
+
+            const jsonLdProduct = buildJsonLdProduct(data, page);
+
             const replacements = {
                 ...data,
                 pageTitle: `${data.productName} für ${page.manufacturer} ${page.model} | Dachbox-Retter`,
+                metaDescription: pageMetaDesc,
+                canonical: page.filename,
                 manufacturer: page.manufacturer,
                 model: page.model,
                 springCount: page.specs.springs || '2',
@@ -70,6 +151,9 @@ async function build() {
                 blockerLength: page.specs.blocker || '100mm',
                 sidebar: sidebarHtml,
                 variantsList: variantsHtml,
+                shippingCountriesHtml: shippingCountriesHtml,
+                jsonLdProduct: jsonLdProduct,
+                jsonLdFaq: jsonLdFaq,
                 introduction: `Ihre ${page.manufacturer} Dachbox (Modell ${page.model}) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. ${page.specs.force || '90N'}) für viel Geld auszutauschen, ist unser Blocker die ideale Lösung, wenn Sie die Box nur gelegentlich (z.B. 1-2 mal im Jahr für den Urlaub) nutzen. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.`
             };
 
@@ -95,6 +179,8 @@ async function build() {
                 </div>
             `).join('');
             html = html.replace('{{faqs}}', faqsHtml);
+
+            html = html.replace('{{comparisons}}', comparisonsHtml);
 
             fs.writeFileSync(path.join(__dirname, page.filename), html);
         });

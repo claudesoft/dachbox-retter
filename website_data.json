@@ -4,7 +4,13 @@
   "metaKeywords": "Dachbox Reparatur, Gasfeder fixieren, Dachbox Zubehör, Federblocker, Thule Ersatzteile, Dachbox Halterung, Gasdruckfeder Ersatz, Kamei Husky, Hapro Traxer, Jetbag Ersatzteile",
   "productName": "Dachbox-Feder-Blocker (Universal)",
   "price": "14,95 €",
-  "shippingInfo": "Versandfertig in 24h | Kostenloser Versand ab 2 Stück",
+  "shippingInfo": "Versandfertig in 24h | Versand nach LU, DE, FR, BE",
+  "shippingCountries": [
+    { "country": "Luxemburg", "flag": "🇱🇺", "code": "LU", "price": "Kostenlos", "days": "1-2 Werktage" },
+    { "country": "Deutschland", "flag": "🇩🇪", "code": "DE", "price": "3,95 €", "days": "2-4 Werktage" },
+    { "country": "Frankreich", "flag": "🇫🇷", "code": "FR", "price": "5,95 €", "days": "3-5 Werktage" },
+    { "country": "Belgien", "flag": "🇧🇪", "code": "BE", "price": "4,95 €", "days": "2-4 Werktage" }
+  ],
   "shopLink": "https://ebay.us/m/xGrwvF",
   "manufacturers": [
     {
@@ -173,6 +179,26 @@
     {
       "question": "Warum sind meine Dachbox-Gasfedern nicht mehr stark genug?",
       "answer": "Gasfedern sind Verschleißteile. Dichtungen altern und der Innendruck lässt nach. Besonders bei Kälte verlieren sie an Kraft, wodurch der Deckel nicht mehr oben bleibt. Ein mechanischer Blocker sichert den Deckel zuverlässig gegen Zuklappen."
+    },
+    {
+      "question": "Ist ein Besenstiel als Dachbox-Stütze eine gute Lösung?",
+      "answer": "Ein Besenstiel oder eine Holzlatte ist instabil, kann wegrutschen und nimmt wertvollen Stauraum in der Box weg. Unser Feder-Blocker wird fest an der Gasfeder fixiert, nimmt keinen Platz für Gepäck weg und ist sekundenschnell montiert."
+    },
+    {
+      "question": "Kann ich eine Gripzange zum Fixieren der Gasfeder verwenden?",
+      "answer": "Davon raten wir dringend ab! Eine Gripzange zerkratzt die Kolbenstange und zerstört damit die Dichtung der Gasfeder endgültig — es kommt zum Ölaustritt. Unser Blocker hat glatte Kontaktflächen, die die Oberfläche der Kolbenstange schonen."
+    },
+    {
+      "question": "Dachbox-Deckel fällt bei Kälte zu — was hilft?",
+      "answer": "Bei niedrigen Temperaturen verlieren Gasfedern stark an Kraft. Besonders Skifahrer und Wintersportler kennen das Problem: Der Deckel wird durch Schnee und Eis schwerer, während die Federn weniger Gegenkraft liefern. Ein mechanischer Blocker funktioniert temperaturunabhängig und sichert den Deckel auch bei Minusgraden."
+    },
+    {
+      "question": "Wo finde ich Ersatz-Gasfedern für meine alte Dachbox?",
+      "answer": "Für ältere Dachboxen (z.B. Jetbag, alte Kamei oder Thule Modelle) sind Original-Ersatzteile oft nicht mehr lieferbar. Auch die Newton-Werte sind häufig unleserlich. Unser universeller Feder-Blocker funktioniert unabhängig von der Newton-Zahl und passt auf alle gängigen Gasfedern mit 6-8mm Kolbenstange."
+    },
+    {
+      "question": "Wie versenden Sie den Feder-Blocker?",
+      "answer": "Wir versenden nach Luxemburg (kostenlos, 1-2 Werktage), Deutschland (3,95 €, 2-4 Werktage), Frankreich (5,95 €, 3-5 Werktage) und Belgien (4,95 €, 2-4 Werktage). Alle Bestellungen werden innerhalb von 24 Stunden versandfertig gemacht."
     }
   ],
   "benefits": [
@@ -183,7 +209,21 @@
     {
       "title": "⚡ Sekundenschnell",
       "description": "Einfach in die ausgefahrene Feder einklemmen. Hält den Deckel sicher offen, solange Sie ein- oder ausladen."
+    },
+    {
+      "title": "🛡️ Sicher beladen",
+      "description": "Kein Mausefallen-Effekt mehr. Schützt Finger und Kopf — besonders wichtig, wenn Kinder beim Beladen helfen."
+    },
+    {
+      "title": "❄️ Funktioniert bei Kälte",
+      "description": "Anders als Gasfedern verliert der Blocker bei Minusgraden keine Kraft. Ideal für Wintersportler und Skiurlaub."
     }
+  ],
+  "comparisons": [
+    { "method": "Besenstiel / Holzlatte", "risk": "Instabil, rutscht weg, nimmt Stauraum weg", "advantage": "Fest fixiert, kein Platzverlust" },
+    { "method": "Gripzange", "risk": "Zerkratzt Kolbenstange, zerstört Dichtung", "advantage": "Glatte Kontaktflächen, schont die Feder" },
+    { "method": "PVC-Rohr (DIY)", "risk": "Muss passgenau geschnitten werden, unhandlich", "advantage": "Universell passend, sofort einsatzbereit" },
+    { "method": "Wäscheklammern", "risk": "Zu schwach, rutschen ab", "advantage": "Mechanisch stabil für alle Box-Gewichte" }
   ],
   "disclaimer": "Wichtiger Hinweis: Dies ist ein privates DIY-Hobbyprojekt. Die angebotenen Teile sind handgefertigte Prototypen aus einem 3D-Drucker. Ich stehe in keinerlei Verbindung zu Thule, Kamei, Hapro oder anderen genannten Marken. Die Markennamen werden nur zur Beschreibung der Kompatibilität genutzt. Die Verwendung erfolgt auf eigene Gefahr und ohne Gewährleistung."
 }

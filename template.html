@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{metaDescription}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://selfmade.lu/{{canonical}}">
+    <meta property="og:title" content="{{pageTitle}}">
+    <meta property="og:description" content="{{metaDescription}}">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://selfmade.lu/{{canonical}}">
+    <meta property="og:image" content="https://selfmade.lu/img1.jpg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Dachbox-Retter">
     <title>{{pageTitle}}</title>
+    {{jsonLdProduct}}
+    {{jsonLdFaq}}
     <style>
         :root {
             --primary: #2563eb;
@@ -111,8 +122,28 @@
         }
         .product-info h1 { margin-top: 0; font-size: 2.2rem; color: #111827; }
         .price { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0; }
-        .shipping { font-size: 0.9rem; color: #059669; font-weight: 600; margin-bottom: 2rem; }
-        
+        .shipping { font-size: 0.9rem; color: #059669; font-weight: 600; margin-bottom: 1rem; }
+
+        .shipping-countries {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+        }
+        .shipping-country {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.6rem;
+            background: #f0fdf4;
+            border-radius: 6px;
+            border: 1px solid #bbf7d0;
+        }
+        .shipping-country .flag { font-size: 1.1rem; }
+        .shipping-country .details { color: #166534; }
+        .shipping-country .days { color: #6b7280; font-size: 0.75rem; }
+
         .specs-table {
             width: 100%;
             border-collapse: collapse;
@@ -149,6 +180,26 @@
         }
         .benefit-card { background: white; padding: 1.5rem; border-radius: 12px; }
 
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .comparison-table th {
+            background: #f8fafc;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+        .comparison-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.9rem;
+        }
+        .comparison-table tr:hover { background: #f8fafc; }
+
         .disclaimer { font-size: 0.85rem; color: #6b7280; text-align: left; margin-top: 5rem; padding: 2rem; border-top: 2px solid #e5e7eb; background: #fef2f2; border-radius: 12px; }
 
         @media (max-width: 1024px) {
@@ -157,6 +208,7 @@
             body.menu-open aside { transform: translateX(0); }
             main { margin-left: 0; width: 100%; }
             .product-grid { grid-template-columns: 1fr; }
+            .shipping-countries { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -172,13 +224,13 @@
             <div class="product-grid">
                 <div>
                     <div class="product-image-container">
-                        <img id="mainImage" src="img1.jpg" alt="Dachbox-Feder-Blocker" class="main-image">
+                        <img id="mainImage" src="img1.jpg" alt="Dachbox-Feder-Blocker für {{manufacturer}} {{model}}" class="main-image">
                     </div>
                     <p style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.5rem; text-align: center;">* Abbildung ähnlich. Das Bild dient als Anwendungsbeispiel.</p>
                     <div class="thumbnails">
-                        <img src="img1.jpg" alt="Preview 1" class="thumb active" onclick="changeImage(this)">
-                        <img src="img2.png" alt="Preview 2" class="thumb" onclick="changeImage(this)">
-                        <img src="img3.png" alt="Preview 3" class="thumb" onclick="changeImage(this)">
+                        <img src="img1.jpg" alt="Feder-Blocker Anwendung" class="thumb active" onclick="changeImage(this)">
+                        <img src="img2.png" alt="Feder-Blocker Detail" class="thumb" onclick="changeImage(this)">
+                        <img src="img3.png" alt="Feder-Blocker Montage" class="thumb" onclick="changeImage(this)">
                     </div>
                 </div>
                 <div class="product-info">
@@ -188,9 +240,13 @@
                     <h1>{{productName}}</h1>
                     <div class="price">{{price}}</div>
                     <div class="shipping">✅ {{shippingInfo}}</div>
-                    
+
+                    <div class="shipping-countries">
+                        {{shippingCountriesHtml}}
+                    </div>
+
                     <p>{{introduction}}</p>
-                    
+
                     <div id="variants-section">
                         {{variantsList}}
                     </div>
@@ -206,7 +262,7 @@
                         <tr><th>Blocker-Länge</th><td>~{{blockerLength}}</td></tr>
                     </table>
 
-                    <a href="{{shopLink}}" class="btn-buy" target="_blank">🛒 Jetzt kaufen</a>
+                    <a href="{{shopLink}}" class="btn-buy" target="_blank" rel="noopener">🛒 Jetzt kaufen</a>
                 </div>
             </div>
 
@@ -219,8 +275,25 @@
                 {{benefits}}
             </div>
 
+            <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h2>Warum der Feder-Blocker besser ist als Hausmittel</h2>
+                <p style="color: #4b5563; margin-bottom: 1.5rem;">Viele Dachbox-Besitzer greifen zu improvisierten Lösungen. Hier sehen Sie, warum unser Blocker die bessere Wahl ist:</p>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Notlösung</th>
+                            <th>Risiko / Nachteil</th>
+                            <th>Vorteil Feder-Blocker</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{comparisons}}
+                    </tbody>
+                </table>
+            </div>
+
             <div class="faq-section" style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <h2>Hilfe bei schwachen Dachbox-Gasfedern</h2>
+                <h2>Häufige Fragen zu schwachen Dachbox-Gasfedern</h2>
                 {{faqs}}
             </div>
 
