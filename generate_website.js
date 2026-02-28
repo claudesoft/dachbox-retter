@@ -88,10 +88,10 @@ async function build() {
             `).join('');
             html = html.replace('{{benefits}}', benefitsHtml);
 
-            fs.writeFileSync(path.join(__dirname, 'public', page.filename), html);
+            fs.writeFileSync(path.join(__dirname, page.filename), html);
         });
 
-        console.log(`✅ ${pages.length} Shop-Seiten im Ordner 'public' generiert.`);
+        console.log(`✅ ${pages.length} Shop-Seiten generiert.`);
     } catch (err) { console.error(err); }
 }
 
