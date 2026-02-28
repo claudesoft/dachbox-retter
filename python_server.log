@@ -1,0 +1,37 @@
+127.0.0.1 - - [09/Feb/2026 17:46:10] "HEAD /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [09/Feb/2026 17:46:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Feb/2026 17:46:18] "GET /thule-motion-3.html HTTP/1.1" 200 -
+192.168.178.133 - - [09/Feb/2026 18:42:15] "GET /hapro-probox.html HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('192.168.178.133', 53436)
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 1342, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             directory=args.directory)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/http/server.py", line 683, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/http/server.py", line 415, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+192.168.178.133 - - [09/Feb/2026 22:11:20] "GET /hapro-probox.html HTTP/1.1" 200 -
+192.168.178.133 - - [09/Feb/2026 22:11:23] code 404, message File not found
+192.168.178.133 - - [09/Feb/2026 22:11:23] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.178.133 - - [10/Feb/2026 04:26:14] code 404, message File not found
+192.168.178.133 - - [10/Feb/2026 04:26:14] "GET /favicon.ico HTTP/1.1" 404 -

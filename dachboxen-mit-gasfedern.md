@@ -10,18 +10,19 @@ Diese Liste enthält Dachbox-Hersteller und Modelle, die in Europa erhältlich s
 
 Thule ist einer der bekanntesten Hersteller für Dachboxen weltweit.
 
-| Modellreihe | Volumen | Gasdruckfeder |
+| Modellreihe | Varianten | Gasdruckfeder |
 |-------------|---------|---------------|
-| **Thule Motion 3** | 300-450 l | Ja |
-| **Thule Force XT** | 300-500 l | Ja |
-| **Thule Vector** | 310-420 l | Ja |
-| **Thule Excellence XT** | diverse | Ja (Lid Lifter ML 120) |
-| **Thule Touring** | diverse | Ja (Lid Lifter ML50 Soft) |
-| **Thule Pacific 100/200/500/600/700/780** | 340-650 l | Ja |
-| **Thule Atlantis** (ältere Modelle) | 340-650 l | Ja |
-| **Thule Spirit 780/820** | 380-480 l | Ja |
-| **Thule Ocean 80** | 320 l | Ja |
-| **Thule Alpine** (ältere Modelle) | diverse | Ja (Stabilus) |
+| **Thule Motion 3** | M, L, XL, XXL, Sport, Alpine | Ja |
+| **Thule Motion XT** | M, L, XL, XXL, Sport, Alpine | Ja |
+| **Thule Force XT** | S, M, L, XL, Sport, Alpine | Ja |
+| **Thule Vector** | M, L, Alpine | Ja |
+| **Thule Excellence XT** | Standard, White Edition | Ja (Lid Lifter ML 120) |
+| **Thule Touring** | S, M, L, Sport, Alpine | Ja (Lid Lifter ML50 Soft) |
+| **Thule Pacific** | 100, 200, 500, 600, 700, 780 | Ja |
+| **Thule Atlantis** | 600, 780, 900 | Ja |
+| **Thule Spirit** | 780, 820 | Ja |
+| **Thule Ocean** | 80, 100, 200, 500, 600, 700 | Ja |
+| **Thule Alpine** | diverse | Ja (Stabilus) |
 
 - Ersatzteile: Stabilus-Gasdruckfedern (Artikelnr. 354899)
 - Lid Lifter ML50 Soft (Artikelnr. 14930) für Touring/Pacific
@@ -34,20 +35,20 @@ Thule ist einer der bekanntesten Hersteller für Dachboxen weltweit.
 
 Kamei hat seinen Sitz in Wolfsburg und ist bekannt für hochwertige Dachboxen.
 
-| Modell | Volumen | Gasdruckfeder |
+| Modell | Varianten | Gasdruckfeder |
 |--------|---------|---------------|
-| **Kamei Delphin 460** | 460 l | Ja |
-| **Kamei Diamant 300/400/450** | 300-450 l | Ja |
+| **Kamei Delphin** | 340, 460 | Ja |
+| **Kamei Diamant** | 300, 400, 450 | Ja |
 | **Kamei Traveller Box** | diverse | Ja |
-| **Kamei Husky M** | 300 l | Ja (90N) |
-| **Kamei Husky L** | diverse | Ja (170N, Art. 05259503) |
-| **Kamei Husky XXL** | 510 l | Ja (170N) |
-| **Kamei Oyster 450** | 450 l | Ja (DuoLift 170N) |
-| **Kamei Corvara** (bis 06/2014) | diverse | Ja |
-| **Kamei Corvara S** | diverse | Ja (DuoLift 170N) |
-| **Kamei 330** | 330 l | Ja |
-| **Kamei 510** | 510 l | Ja (DuoLift 170N) |
-| **Kamei Fosco 420** | 420 l | Ja (DuoLift-System) |
+| **Kamei Husky M** | Standard | Ja (90N) |
+| **Kamei Husky L** | Standard | Ja (170N, Art. 05259503) |
+| **Kamei Husky XXL** | Standard | Ja (170N) |
+| **Kamei Oyster 450** | Standard | Ja (DuoLift 170N) |
+| **Kamei Corvara** | diverse | Ja |
+| **Kamei Corvara S** | 390, 505 | Ja (DuoLift 170N) |
+| **Kamei 330** | Standard | Ja |
+| **Kamei 510** | Standard | Ja (DuoLift 170N) |
+| **Kamei Fosco 420** | Standard | Ja (DuoLift-System) |
 
 - Ersatz-Gasdruckfeder: Artikelnr. 05259801 (90N, 269mm Länge, Kugelpfanne)
 - DuoLift Deckelstütze: Artikelnr. 05259501 (170N) für Oyster, Corvara S, KAMEI 510
@@ -79,19 +80,19 @@ Hapro ist ein etablierter niederländischer Hersteller.
 | Modellreihe | Volumen | Gasdruckfeder |
 |-------------|---------|---------------|
 | **Hapro Zenith** | 360-440 l | Ja |
-| **Hapro Carver 6.5/8.5** | 430-550 l | Ja (Master-Fit) |
-| **Hapro Cruiser 10.8** | 610 l | Ja |
-| **Hapro Traxer 4.6/5.6/6.6/8.6** | 370-530 l | Ja (Premium Fit) |
-| **Hapro Roady 300/420** | 300-420 l | Ja |
-| **Hapro Nordic** (Skibox) | diverse | Ja |
-| **Hapro Rider 6.4** | diverse | Ja (Master-Fit) |
-| **Hapro Trivor** | diverse | Ja |
+| **Hapro Carver** | 6.3, 6.4, 6.5, 8.5 | Ja (Master-Fit) |
+| **Hapro Cruiser** | 10.8 | Ja |
+| **Hapro Traxer** | 4.6, 5.6, 6.6, 8.6 | Ja (Premium Fit) |
+| **Hapro Roady** | 350, 450, 3300, 4000 | Ja |
+| **Hapro Nordic** | 10.8 | Ja |
+| **Hapro Rider** | 4.4, 5.4, 6.4 | Ja (Master-Fit) |
+| **Hapro Trivor** | 440, 560, 640 | Ja |
 | **Hapro 600** (älteres Modell) | 600 l | Ja |
 | **Hapro Probox 380** | 380 l | Ja |
 | **Hapro Probox 460** | 420 l | Ja |
 | **Hapro Probox Comfort 430 EF** | 430 l | Ja |
 | **Hapro Probox Wave 420** | 420 l | Ja (dynamisches Federsystem) |
-| **Hapro Funbox 300/320** | 300-320 l | Ja |
+| **Hapro Funbox** | 300, 320 | Ja |
 
 - Ersatz-Gasfeder: Artikelnr. #00027 (100N, 315mm Länge, Kugelpfanne)
 - Hydraulische Streben für sanftes Öffnen/Schließen

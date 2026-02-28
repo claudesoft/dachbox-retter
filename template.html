@@ -162,6 +162,10 @@
                     <div class="shipping">✅ {{shippingInfo}}</div>
                     
                     <p>{{introduction}}</p>
+                    
+                    <div id="variants-section">
+                        {{variantsList}}
+                    </div>
 
                     <table class="specs-table">
                         <tr><th>Hersteller</th><td>{{manufacturer}}</td></tr>
@@ -174,7 +178,7 @@
                         <tr><th>Blocker-Länge</th><td>~{{blockerLength}}</td></tr>
                     </table>
 
-                    <a href="#" class="btn-buy" onclick="alert('In den Warenkorb gelegt! (Demo)')">🛒 Jetzt kaufen</a>
+                    <a href="{{shopLink}}" class="btn-buy" target="_blank">🛒 Jetzt kaufen</a>
                 </div>
             </div>
 

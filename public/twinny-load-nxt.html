@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gasfedern der Dachbox schwach? Unser Feder-Blocker ist die clevere, günstige Lösung. Einfach einklemmen, Box bleibt sicher offen. Jetzt entdecken!">
+    <title>Dachbox-Feder-Blocker (Universal) für Twinny Load NXT | Dachbox-Retter</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #10b981;
+            --text: #1f2937;
+            --bg: #f9fafb;
+            --sidebar-width: 280px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--bg);
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .menu-btn {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: none;
+        }
+
+        aside {
+            width: var(--sidebar-width);
+            background: #fff;
+            border-right: 1px solid #e5e7eb;
+            padding: 1.5rem 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+            z-index: 900;
+        }
+        .nav-logo { font-weight: bold; color: var(--primary); font-size: 1.4rem; margin-bottom: 2rem; display: block; text-decoration: none; }
+        .nav-group { margin-bottom: 0.5rem; }
+        .nav-title { font-weight: 600; padding: 0.5rem; cursor: pointer; display: flex; justify-content: space-between; border-radius: 4px; }
+        .nav-title:hover { background: #f3f4f6; }
+        .nav-list { list-style: none; padding: 0 0 0 1rem; margin: 0; display: none; }
+        .nav-group.expanded .nav-list { display: block; }
+        .nav-item a { display: block; padding: 0.3rem 0.5rem; color: #6b7280; text-decoration: none; font-size: 0.9rem; }
+        .nav-item.active a { color: var(--primary); font-weight: bold; background: #eff6ff; border-radius: 4px; }
+
+        main {
+            flex-grow: 1;
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+
+        /* Product Detail Style */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        .product-image-placeholder {
+            background: #f3f4f6;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #d1d5db;
+            border: 2px dashed #e5e7eb;
+        }
+        .product-info h1 { margin-top: 0; font-size: 2.2rem; color: #111827; }
+        .price { font-size: 2rem; font-weight: bold; color: var(--primary); margin: 1rem 0; }
+        .shipping { font-size: 0.9rem; color: #059669; font-weight: 600; margin-bottom: 2rem; }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        .specs-table th, .specs-table td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .specs-table th { color: #6b7280; font-weight: 500; width: 40%; }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 1.25rem;
+            border-radius: 12px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin-top: 2rem;
+        }
+        .btn-buy:hover { transform: scale(1.02); background: #059669; }
+
+        .benefits-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .benefit-card { background: white; padding: 1.5rem; border-radius: 12px; }
+
+        .disclaimer { font-size: 0.8rem; color: #9ca3af; text-align: center; margin-top: 5rem; padding: 2rem; border-top: 1px solid #e5e7eb; }
+
+        @media (max-width: 1024px) {
+            .menu-btn { display: block; }
+            aside { transform: translateX(-100%); }
+            body.menu-open aside { transform: translateX(0); }
+            main { margin-left: 0; width: 100%; }
+            .product-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body id="page-body">
+    <button class="menu-btn" onclick="document.getElementById('page-body').classList.toggle('menu-open')">☰ Menü</button>
+    <aside>
+        <a href="index.html" class="nav-logo">📦 Dachbox-Retter</a>
+        <nav><div class="nav-group "><div class="nav-title">Thule</div><ul class="nav-list"><li class="nav-item "><a href="thule-motion-3.html">Motion 3</a></li><li class="nav-item "><a href="thule-motion-xt.html">Motion XT</a></li><li class="nav-item "><a href="thule-force-xt.html">Force XT</a></li><li class="nav-item "><a href="thule-vector.html">Vector</a></li><li class="nav-item "><a href="thule-pacific.html">Pacific</a></li><li class="nav-item "><a href="thule-atlantis.html">Atlantis</a></li><li class="nav-item "><a href="thule-spirit.html">Spirit</a></li><li class="nav-item "><a href="thule-ocean.html">Ocean</a></li><li class="nav-item "><a href="thule-alpine.html">Alpine</a></li><li class="nav-item "><a href="thule-touring.html">Touring</a></li><li class="nav-item "><a href="thule-excellence-xt.html">Excellence XT</a></li></ul></div><div class="nav-group "><div class="nav-title">Kamei</div><ul class="nav-list"><li class="nav-item "><a href="kamei-oyster.html">Oyster</a></li><li class="nav-item "><a href="kamei-fosco.html">Fosco</a></li><li class="nav-item "><a href="kamei-husky-m.html">Husky M</a></li><li class="nav-item "><a href="kamei-husky-l.html">Husky L</a></li><li class="nav-item "><a href="kamei-husky-xxl.html">Husky XXL</a></li><li class="nav-item "><a href="kamei-corvara-s.html">Corvara S</a></li><li class="nav-item "><a href="kamei-delphin.html">Delphin</a></li><li class="nav-item "><a href="kamei-diamant.html">Diamant</a></li><li class="nav-item "><a href="kamei-traveller-box.html">Traveller Box</a></li><li class="nav-item "><a href="kamei-510.html">510</a></li><li class="nav-item "><a href="kamei-330.html">330</a></li></ul></div><div class="nav-group "><div class="nav-title">Hapro</div><ul class="nav-list"><li class="nav-item "><a href="hapro-trivor.html">Trivor</a></li><li class="nav-item "><a href="hapro-zenith.html">Zenith</a></li><li class="nav-item "><a href="hapro-traxer.html">Traxer</a></li><li class="nav-item "><a href="hapro-rider.html">Rider</a></li><li class="nav-item "><a href="hapro-carver.html">Carver</a></li><li class="nav-item "><a href="hapro-cruiser.html">Cruiser</a></li><li class="nav-item "><a href="hapro-roady.html">Roady</a></li><li class="nav-item "><a href="hapro-nordic.html">Nordic</a></li><li class="nav-item "><a href="hapro-probox.html">Probox</a></li><li class="nav-item "><a href="hapro-funbox.html">Funbox</a></li></ul></div><div class="nav-group "><div class="nav-title">Calix</div><ul class="nav-list"><li class="nav-item "><a href="calix-aero-loader.html">Aero Loader</a></li><li class="nav-item "><a href="calix-aero-loader-2.html">Aero Loader 2</a></li></ul></div><div class="nav-group "><div class="nav-title">Green Valley</div><ul class="nav-list"><li class="nav-item "><a href="green-valley-hartschalen-modelle.html">Hartschalen-Modelle</a></li></ul></div><div class="nav-group "><div class="nav-title">Jetbag</div><ul class="nav-list"><li class="nav-item "><a href="jetbag-apollo.html">Apollo</a></li><li class="nav-item "><a href="jetbag-sprint.html">Sprint</a></li><li class="nav-item "><a href="jetbag-family.html">Family</a></li><li class="nav-item "><a href="jetbag-classic.html">Classic</a></li><li class="nav-item "><a href="jetbag-holiday.html">Holiday</a></li></ul></div><div class="nav-group "><div class="nav-title">Atera</div><ul class="nav-list"><li class="nav-item "><a href="atera-casar.html">Casar</a></li><li class="nav-item "><a href="atera-certo.html">Certo</a></li><li class="nav-item "><a href="atera-carver-ii.html">Carver II</a></li><li class="nav-item "><a href="atera-zenith-650.html">Zenith 650</a></li><li class="nav-item "><a href="atera-zenith-850.html">Zenith 850</a></li></ul></div><div class="nav-group "><div class="nav-title">Mont Blanc</div><ul class="nav-list"><li class="nav-item "><a href="mont-blanc-triton.html">Triton</a></li><li class="nav-item "><a href="mont-blanc-altitude.html">Altitude</a></li><li class="nav-item "><a href="mont-blanc-vista.html">Vista</a></li></ul></div><div class="nav-group "><div class="nav-title">Packline</div><ul class="nav-list"><li class="nav-item "><a href="packline-nx-summit.html">NX Summit</a></li><li class="nav-item "><a href="packline-nx-summit-xl.html">NX Summit XL</a></li><li class="nav-item "><a href="packline-fx-suv.html">FX-SUV</a></li><li class="nav-item "><a href="packline-nx-215.html">NX 215</a></li><li class="nav-item "><a href="packline-nx-premium.html">NX Premium</a></li></ul></div><div class="nav-group "><div class="nav-title">Farad</div><ul class="nav-list"><li class="nav-item "><a href="farad-marlin.html">Marlin</a></li><li class="nav-item "><a href="farad-raya.html">Raya</a></li><li class="nav-item "><a href="farad-crub.html">Crub</a></li></ul></div><div class="nav-group "><div class="nav-title">G3</div><ul class="nav-list"><li class="nav-item "><a href="g3-elegance.html">Elegance</a></li><li class="nav-item "><a href="g3-reef.html">Reef</a></li><li class="nav-item "><a href="g3-arjes.html">Arjes</a></li><li class="nav-item "><a href="g3-helios.html">Helios</a></li><li class="nav-item "><a href="g3-krono.html">Krono</a></li><li class="nav-item "><a href="g3-spark.html">Spark</a></li></ul></div><div class="nav-group "><div class="nav-title">Menabo</div><ul class="nav-list"><li class="nav-item "><a href="menabo-diamond.html">Diamond</a></li><li class="nav-item "><a href="menabo-mania.html">Mania</a></li><li class="nav-item "><a href="menabo-marathon.html">Marathon</a></li></ul></div><div class="nav-group "><div class="nav-title">Modula</div><ul class="nav-list"><li class="nav-item "><a href="modula-ciao.html">Ciao</a></li><li class="nav-item "><a href="modula-wego.html">Wego</a></li><li class="nav-item "><a href="modula-travel.html">Travel</a></li></ul></div><div class="nav-group expanded"><div class="nav-title">Twinny Load</div><ul class="nav-list"><li class="nav-item active"><a href="twinny-load-nxt.html">NXT</a></li><li class="nav-item "><a href="twinny-load-rst.html">RST</a></li></ul></div><div class="nav-group "><div class="nav-title">Neumann</div><ul class="nav-list"><li class="nav-item "><a href="neumann-whale-200.html">Whale 200</a></li><li class="nav-item "><a href="neumann-whale-daddy.html">Whale Daddy</a></li></ul></div><div class="nav-group "><div class="nav-title">Cruz</div><ul class="nav-list"><li class="nav-item "><a href="cruz-easy.html">Easy</a></li><li class="nav-item "><a href="cruz-clan.html">Clan</a></li></ul></div><div class="nav-group "><div class="nav-title">Yakima</div><ul class="nav-list"><li class="nav-item "><a href="yakima-rocketbox.html">Rocketbox</a></li><li class="nav-item "><a href="yakima-skybox.html">SkyBox</a></li></ul></div></nav>
+    </aside>
+
+    <main>
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-image-placeholder">
+                    📦<br><span style="font-size: 0.8rem">Produktbild: Blocker eingeklemmt</span>
+                </div>
+                <div class="product-info">
+                    <div style="color: var(--primary); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 0.5rem;">
+                        Passend für Twinny Load NXT
+                    </div>
+                    <h1>Dachbox-Feder-Blocker (Universal)</h1>
+                    <div class="price">14,95 €</div>
+                    <div class="shipping">✅ Versandfertig in 24h | Kostenloser Versand ab 2 Stück</div>
+                    
+                    <p>Ihre Twinny Load Dachbox (Modell NXT) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. 100N) für viel Geld auszutauschen, ist unser Blocker die perfekte Lösung. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.</p>
+                    
+                    <div id="variants-section">
+                        
+                    </div>
+
+                    <table class="specs-table">
+                        <tr><th>Hersteller</th><td>Twinny Load</td></tr>
+                        <tr><th>Modell</th><td>NXT</td></tr>
+                        <tr><th>Anzahl Federn</th><td>2</td></tr>
+                        <tr><th>Original-Kraft</th><td>~100N</td></tr>
+                        <tr><th>Kolbenstange (Rod) Ø</th><td>8mm</td></tr>
+                        <tr><th>Zylinder Ø</th><td>18mm</td></tr>
+                        <tr><th>Länge (ausgefahren)</th><td>280mm</td></tr>
+                        <tr><th>Blocker-Länge</th><td>~100mm</td></tr>
+                    </table>
+
+                    <a href="https://ebay.us/m/xGrwvF" class="btn-buy" target="_blank">🛒 Jetzt kaufen</a>
+                </div>
+            </div>
+
+            <div class="benefits-section">
+                
+                <div class="benefit-card">
+                    <h3>💰 Unschlagbar Günstig</h3>
+                    <p>Ein Bruchteil der Kosten neuer Original-Federn. Sparen Sie sich das Geld für den nächsten Urlaub.</p>
+                </div>
+            
+                <div class="benefit-card">
+                    <h3>⚡ Sekundenschnell</h3>
+                    <p>Einfach in die ausgefahrene Feder einklemmen. Hält bombenfest, solange Sie packen.</p>
+                </div>
+            
+            </div>
+
+            <div class="disclaimer">Kleingedrucktes: Diese Blockierteile sind ein privates Hobbyprojekt. Die Qualität entspricht einem DIY-projekt. Verwendung auf eigene Gefahr.</div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.nav-title').forEach(title => {
+            title.addEventListener('click', () => title.parentElement.classList.toggle('expanded'));
+        });
+    </script>
+</body>
+</html>

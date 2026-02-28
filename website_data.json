@@ -5,48 +5,75 @@
   "productName": "Dachbox-Feder-Blocker (Universal)",
   "price": "14,95 €",
   "shippingInfo": "Versandfertig in 24h | Kostenloser Versand ab 2 Stück",
+  "shopLink": "https://ebay.us/m/xGrwvF",
   "manufacturers": [
     {
       "name": "Thule",
       "defaultSpecs": { "springs": 2, "force": "80-120N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "notes": "Ersatzteil: Stabilus 354899. Beidseitige Öffnung bei vielen Modellen.",
       "models": [
-        { "name": "Motion 3", "specs": { "force": "100N" } },
-        { "name": "Motion XT", "specs": { "force": "120N" } },
-        { "name": "Force XT", "specs": { "force": "90N" } },
-        { "name": "Vector", "specs": { "force": "120N" } },
-        { "name": "Pacific", "specs": { "force": "50N" } },
-        { "name": "Atlantis", "specs": { "force": "80N" } },
-        { "name": "Spirit", "specs": { "force": "80N" } },
-        { "name": "Ocean", "specs": { "force": "50N" } },
+        { "name": "Motion 3", "variants": ["M", "L", "XL", "XXL", "Sport", "Alpine"], "specs": { "force": "100N" } },
+        { "name": "Motion XT", "variants": ["M", "L", "XL", "XXL", "Sport", "Alpine"], "specs": { "force": "120N" } },
+        { "name": "Force XT", "variants": ["S", "M", "L", "XL", "Sport", "Alpine"], "specs": { "force": "90N" } },
+        { "name": "Vector", "variants": ["M", "L", "Alpine"], "specs": { "force": "120N" } },
+        { "name": "Pacific", "variants": ["100", "200", "500", "600", "700", "780"], "specs": { "force": "50N" }, "notes": "Verwendet Lid Lifter ML50 Soft (Art. 14930)" },
+        { "name": "Atlantis", "variants": ["600", "780", "900"], "specs": { "force": "80N" } },
+        { "name": "Spirit", "variants": ["780", "820"], "specs": { "force": "80N" } },
+        { "name": "Ocean", "variants": ["80", "100", "200", "500", "600", "700"], "specs": { "force": "50N" } },
         { "name": "Alpine", "specs": { "force": "60N" } },
-        { "name": "Touring", "specs": { "force": "50N" } },
-        { "name": "Excellence XT", "specs": { "force": "120N" } }
+        { "name": "Touring", "variants": ["S", "M", "L", "Sport", "Alpine"], "specs": { "force": "50N" }, "notes": "Verwendet Lid Lifter ML50 Soft (Art. 14930)" },
+        { "name": "Excellence XT", "variants": ["Standard", "White Edition"], "specs": { "force": "120N" }, "notes": "Verwendet Lid Lifter ML 120 Green (Art. 14939)" }
       ]
     },
     {
       "name": "Kamei",
       "defaultSpecs": { "springs": 2, "force": "170N", "length": "290mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "notes": "Hersteller: Stabilus. DuoLift-System ermöglicht beidseitiges Öffnen.",
       "models": [
-        { "name": "Oyster" },
-        { "name": "Fosco" },
-        { "name": "Husky M", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
-        { "name": "Husky L" },
-        { "name": "Husky XXL" },
-        { "name": "Corvara S" },
-        { "name": "Delphin", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
-        { "name": "Diamant", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
+        { "name": "Oyster", "notes": "DuoLift 170N (Art. 05259501)" },
+        { "name": "Fosco", "notes": "DuoLift-System" },
+        { "name": "Husky M", "variants": ["Standard"], "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" }, "notes": "Ersatz: Art. 05259801" },
+        { "name": "Husky L", "variants": ["Standard"], "notes": "170N (Art. 05259503)" },
+        { "name": "Husky XXL", "variants": ["Standard"], "notes": "170N (Art. 05259503)" },
+        { "name": "Corvara S", "variants": ["505", "390"], "notes": "DuoLift 170N (Art. 05259501)" },
+        { "name": "Delphin", "variants": ["340", "460"], "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" }, "notes": "Ersatz: Art. 05259801" },
+        { "name": "Diamant", "variants": ["300", "400", "450"], "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
         { "name": "Traveller Box", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } },
-        { "name": "510" },
+        { "name": "510", "notes": "DuoLift 170N (Art. 05259501)" },
         { "name": "330", "specs": { "force": "90N", "length": "269mm", "rod": "6mm", "cylinder": "15mm", "blocker": "80mm" } }
       ]
     },
     {
       "name": "Hapro",
       "defaultSpecs": { "springs": 2, "force": "100N", "length": "315mm", "rod": "8mm", "cylinder": "18mm", "blocker": "110mm" },
+      "notes": "Ersatz-Gasfeder Art. #00027. Hydraulische Streben für sanftes Öffnen.",
       "models": [
-        { "name": "Trivor" }, { "name": "Zenith" }, { "name": "Traxer" }, 
-        { "name": "Rider" }, { "name": "Carver" }, { "name": "Cruiser" }, 
-        { "name": "Roady" }, { "name": "Nordic" }, { "name": "Probox" }, { "name": "Funbox" }
+        { "name": "Trivor", "variants": ["440", "560", "640"] }, 
+        { "name": "Zenith", "variants": ["6.6", "8.6"] }, 
+        { "name": "Traxer", "variants": ["4.6", "5.6", "6.6", "8.6"], "notes": "Premium Fit-System. Spring Strut Green 34/37N (Art. 14484)" }, 
+        { "name": "Rider", "variants": ["4.4", "5.4", "6.4"] }, 
+        { "name": "Carver", "variants": ["6.3", "6.4", "6.5", "8.5"] }, 
+        { "name": "Cruiser", "variants": ["10.8"] }, 
+        { "name": "Roady", "variants": ["350", "450", "3300", "4000"] }, 
+        { "name": "Nordic", "variants": ["10.8"] }, 
+        { "name": "Probox", "variants": ["380", "460", "Comfort 430 EF", "Wave 420"] }, 
+        { "name": "Funbox", "variants": ["300", "320"] }
+      ]
+    },
+    {
+      "name": "Calix",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "notes": "Spezialist aus Schweden. Gasfedern oft in der Nase der Box versteckt.",
+      "models": [
+        { "name": "Aero Loader" },
+        { "name": "Aero Loader 2" }
+      ]
+    },
+    {
+      "name": "Green Valley",
+      "defaultSpecs": { "springs": 2, "force": "100N", "length": "280mm", "rod": "8mm", "cylinder": "18mm", "blocker": "100mm" },
+      "models": [
+        { "name": "Hartschalen-Modelle" }
       ]
     },
     {
