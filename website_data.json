@@ -4,12 +4,12 @@
   "metaKeywords": "Dachbox Reparatur, Gasfeder fixieren, Dachbox Zubehör, Federblocker, Thule Ersatzteile, Dachbox Halterung, Gasdruckfeder Ersatz, Kamei Husky, Hapro Traxer, Jetbag Ersatzteile",
   "productName": "Dachbox-Feder-Blocker (Universal)",
   "price": "14,95 €",
-  "shippingInfo": "Versandfertig in 24h | Versand nach LU, DE, FR, BE",
+  "shippingInfo": "Kostenloser Versand nach LU, DE, FR & BE",
   "shippingCountries": [
     { "country": "Luxemburg", "flag": "🇱🇺", "code": "LU", "price": "Kostenlos", "days": "1-2 Werktage" },
-    { "country": "Deutschland", "flag": "🇩🇪", "code": "DE", "price": "3,95 €", "days": "2-4 Werktage" },
-    { "country": "Frankreich", "flag": "🇫🇷", "code": "FR", "price": "5,95 €", "days": "3-5 Werktage" },
-    { "country": "Belgien", "flag": "🇧🇪", "code": "BE", "price": "4,95 €", "days": "2-4 Werktage" }
+    { "country": "Deutschland", "flag": "🇩🇪", "code": "DE", "price": "Kostenlos", "days": "2-4 Werktage" },
+    { "country": "Frankreich", "flag": "🇫🇷", "code": "FR", "price": "Kostenlos", "days": "3-5 Werktage" },
+    { "country": "Belgien", "flag": "🇧🇪", "code": "BE", "price": "Kostenlos", "days": "2-4 Werktage" }
   ],
   "shopLink": "https://ebay.us/m/xGrwvF",
   "manufacturers": [
@@ -198,7 +198,7 @@
     },
     {
       "question": "Wie versenden Sie den Feder-Blocker?",
-      "answer": "Wir versenden nach Luxemburg (kostenlos, 1-2 Werktage), Deutschland (3,95 €, 2-4 Werktage), Frankreich (5,95 €, 3-5 Werktage) und Belgien (4,95 €, 2-4 Werktage). Alle Bestellungen werden innerhalb von 24 Stunden versandfertig gemacht."
+      "answer": "Wir versenden kostenlos nach Luxemburg (1-2 Werktage), Deutschland (2-4 Werktage), Frankreich (3-5 Werktage) und Belgien (2-4 Werktage). Alle Bestellungen werden innerhalb von 24 Stunden versandfertig gemacht."
     }
   ],
   "benefits": [
