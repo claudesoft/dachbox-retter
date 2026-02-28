@@ -70,7 +70,7 @@ async function build() {
                 blockerLength: page.specs.blocker || '100mm',
                 sidebar: sidebarHtml,
                 variantsList: variantsHtml,
-                introduction: `Ihre ${page.manufacturer} Dachbox (Modell ${page.model}) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. ${page.specs.force || '90N'}) für viel Geld auszutauschen, ist unser Blocker die perfekte Lösung. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.`
+                introduction: `Ihre ${page.manufacturer} Dachbox (Modell ${page.model}) bleibt nicht mehr zuverlässig offen? Anstatt die teuren Original-Gasfedern (ca. ${page.specs.force || '90N'}) für viel Geld auszutauschen, ist unser Blocker die ideale Lösung, wenn Sie die Box nur gelegentlich (z.B. 1-2 mal im Jahr für den Urlaub) nutzen. Da die Box in 99% der Zeit ohnehin geschlossen ist, reicht dieser mechanische Helfer völlig aus.`
             };
 
             Object.keys(replacements).forEach(key => {
@@ -87,6 +87,14 @@ async function build() {
                 </div>
             `).join('');
             html = html.replace('{{benefits}}', benefitsHtml);
+
+            const faqsHtml = data.faqs.map(f => `
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="display: block; font-size: 1.1rem; color: #111827; margin-bottom: 0.25rem;">${f.question}</strong>
+                    <p style="margin: 0; color: #4b5563;">${f.answer}</p>
+                </div>
+            `).join('');
+            html = html.replace('{{faqs}}', faqsHtml);
 
             fs.writeFileSync(path.join(__dirname, page.filename), html);
         });
