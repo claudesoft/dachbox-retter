@@ -126,7 +126,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-size: 0.85rem;
         }
         .shipping-country {
@@ -209,7 +209,8 @@
             .container { padding: 1rem; }
             .product-grid { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
             .product-info h1 { font-size: 1.5rem; }
-            .shipping-countries { grid-template-columns: 1fr 1fr; }
+            .shipping-countries { grid-template-columns: 1fr; }
+            .shipping-section { padding: 1.5rem !important; }
             .benefits-section { grid-template-columns: 1fr; }
             .comparison-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
             .faq-section, .comparison-table-wrapper { padding: 1.5rem !important; }
@@ -299,7 +300,7 @@
                 {{faqs}}
             </div>
 
-            <div style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <div class="shipping-section" style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
                 <h3 style="margin-top: 0; color: #374151; font-size: 1.1rem;">Versand & Lieferung</h3>
                 <div class="shipping-countries">
                     {{shippingCountriesHtml}}
