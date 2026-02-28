@@ -203,12 +203,19 @@
         .disclaimer { font-size: 0.85rem; color: #6b7280; text-align: left; margin-top: 5rem; padding: 2rem; border-top: 2px solid #e5e7eb; background: #fef2f2; border-radius: 12px; }
 
         @media (max-width: 1024px) {
+            html, body { overflow-x: hidden; }
             .menu-btn { display: block; }
             aside { transform: translateX(-100%); }
             body.menu-open aside { transform: translateX(0); }
-            main { margin-left: 0; width: 100%; }
-            .product-grid { grid-template-columns: 1fr; }
-            .shipping-countries { grid-template-columns: 1fr; }
+            main { margin-left: 0; width: 100%; min-width: 0; }
+            .container { padding: 1rem; }
+            .product-grid { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
+            .product-info h1 { font-size: 1.5rem; }
+            .shipping-countries { grid-template-columns: 1fr 1fr; }
+            .benefits-section { grid-template-columns: 1fr; }
+            .comparison-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .faq-section, .comparison-table-wrapper { padding: 1.5rem !important; }
+            .specs-table th, .specs-table td { padding: 0.5rem; font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -319,7 +326,7 @@
             
             </div>
 
-            <div style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <div class="comparison-table-wrapper" style="margin-top: 3rem; background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                 <h2>Warum der Feder-Blocker besser ist als Hausmittel</h2>
                 <p style="color: #4b5563; margin-bottom: 1.5rem;">Viele Dachbox-Besitzer greifen zu improvisierten Lösungen. Hier sehen Sie, warum unser Blocker die bessere Wahl ist:</p>
                 <table class="comparison-table">
